@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Открытая Йога</string>
+    <string name="title_activity_maps">Карта</string>
+    <string name="clubAvatar">Клуб Аватар</string>
+</resources>
