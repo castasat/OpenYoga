@@ -3,8 +3,12 @@ package com.openyogaland.denis.openyoga;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity
+public class MainActivity extends AppCompatActivity implements OnClickListener
 {
   /**
    * This method is called then Activity is created
@@ -14,5 +18,22 @@ public class MainActivity extends AppCompatActivity
   protected void onCreate(@Nullable Bundle savedInstanceState)
   {
     super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+  
+    Button mapButton = findViewById(R.id.mapButton);
+    mapButton.setOnClickListener(this);
+  }
+  
+  /**
+   * Called when a view has been clicked.
+   * @param view The view that was clicked.
+   */
+  @Override
+  public void onClick(View view)
+  {
+    if(view.getId() == R.id.mapButton)
+    {
+      Toast.makeText(this, "Here we will call map activity", Toast.LENGTH_SHORT).show();
+    }
   }
 }
