@@ -1,10 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ConstraintLayout
+<android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/confederateCardView"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    style="@style/cardViewStyle">
 
-</ConstraintLayout>
+    <TextView
+        android:id="@+id/confederateFullNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        tools:text="Confederate Full Name" />
+
+    <TextView
+        android:id="@+id/confederateAddressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|end"
+        tools:text="Confederate Address" />
+
+    <Button
+        android:id="@+id/confederateCoordinatesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        tools:text="Open Map"/>
+
+</android.support.v7.widget.CardView>
+
 
 
 
