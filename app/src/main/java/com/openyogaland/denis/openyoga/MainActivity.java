@@ -1,5 +1,6 @@
 package com.openyogaland.denis.openyoga;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -33,7 +34,12 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
   {
     if(view.getId() == R.id.mapButton)
     {
-      Toast.makeText(this, "Here we will call map activity", Toast.LENGTH_SHORT).show();
+      Toast.makeText(this, "Here we call map activity", Toast.LENGTH_SHORT).show();
+      // вызываем новую активность
+      Intent intent = new Intent(this, MapsActivity.class);
+      // здесь можно в интент передать данные с помощью метода intent.putExtra(String "key", "значение")
+      startActivity(intent);
+      // если нужно вернуть результат startActivityForResult(intent)
     }
   }
 }
