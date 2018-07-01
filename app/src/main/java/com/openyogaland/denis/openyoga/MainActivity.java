@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.RecyclerView.LayoutManager;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -23,6 +26,16 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
   
     Button mapButton = findViewById(R.id.mapButton);
     mapButton.setOnClickListener(this);
+  
+    RecyclerView confederateRecyclerView = findViewById(R.id.confederateRecyclerView);
+    // improve performance
+    confederateRecyclerView.setHasFixedSize(false);
+    // set layout manager
+    LayoutManager confederateLayoutManager = new LinearLayoutManager(this);
+    confederateRecyclerView.setLayoutManager(confederateLayoutManager);
+    // set adapter
+    ConfederateAdapter confederateAdapter = new ConfederateAdapter();
+    confederateRecyclerView.setAdapter(confederateAdapter);
   }
   
   /**
