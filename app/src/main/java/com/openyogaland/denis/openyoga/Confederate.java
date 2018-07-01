@@ -27,6 +27,7 @@ public class Confederate
     this.fullName = fullName;
   }
   
+  // constructor
   public Confederate(LatLng coordinates)
   {
     fullName = new FullName("");
@@ -35,6 +36,7 @@ public class Confederate
   
   public Confederate(FullName fullName, String address)
   {
+  
     this(fullName);
     this.address = address;
   }
@@ -42,6 +44,42 @@ public class Confederate
   public Confederate(FullName fullName, String address, LatLng coordinates)
   {
     this(fullName, address);
+    this.coordinates = coordinates;
+  }
+  
+  // getter
+  public FullName getFullName()
+  {
+    return fullName;
+  }
+  
+  // setter
+  public void setFullName(FullName fullName)
+  {
+    this.fullName = fullName;
+  }
+  
+  // getter
+  public String getAddress()
+  {
+    return address;
+  }
+  
+  // setter
+  public void setAddress(String address)
+  {
+    this.address = address;
+  }
+  
+  // getter
+  public LatLng getCoordinates()
+  {
+    return coordinates;
+  }
+  
+  // setter
+  public void setCoordinates(LatLng coordinates)
+  {
     this.coordinates = coordinates;
   }
 }
